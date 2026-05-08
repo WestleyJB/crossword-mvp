@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Crossword</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <header class="game-header">
+        <button id="back-button">← Back</button>
+        <h1 id="puzzle-title">Loading...</h1>
+    </header>
+
+    <main class="game-container">
+        <!-- Hidden input to capture mobile keyboard events without zooming -->
+        <input 
+            type="text" 
+            id="hidden-input" 
+            style="position: absolute; opacity: 0; pointer-events: none;" 
+            autocomplete="off" 
+            autocorrect="off" 
+            autocapitalize="on" 
+            spellcheck="false"
+        >
+
+        <!-- The CSS Grid will render here -->
+        <div id="crossword-grid" class="crossword-grid"></div>
+
+        <div class="clue-display">
+            <p id="current-clue">Select a square to start!</p>
+        </div>
+    </main>
+
+    <script type="module" src="/src/game.ts"></script>
+</body>
+</html>

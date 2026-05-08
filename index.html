@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Critical for your 5-inch screen mobile-first guide -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossword Central</title>
+    <!-- Points to the shared stylesheet in the src folder -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header>
+        <h1>Crossword Central</h1>
+    </header>
+
+    <main class="category-grid">
+        <!-- IDs here must match the Category type in main.ts -->
+        <button class="card" id="tommy-joe">
+            <h2>Tommy Joe</h2>
+            <p>Classic syndicated style puzzles.</p>
+        </button>
+
+        <button class="card" id="random">
+            <h2>Random</h2>
+            <p>A fresh challenge every time.</p>
+        </button>
+
+        <button class="card" id="animals">
+            <h2>Animals</h2>
+            <p>Puzzles featuring the natural world.</p>
+        </button>
+
+        <button class="card" id="pokemon">
+            <h2>Pokemon</h2>
+            <p>Test your knowledge of the Kanto and Johto regions.</p>
+        </button>
+    </main>
+
+    <!-- Vite expects the main entry point to be linked as a module -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
